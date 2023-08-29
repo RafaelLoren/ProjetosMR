@@ -149,11 +149,9 @@
             display: inline-block;
             align-items: center;
             justify-content: center;
-            text-shadow: -2px 1px 3px #00000091;
-
+            text-shadow: -1px -1px 3px #00000091;
             font-size: 3em;
             font-family: 'Geologica', sans-serif;
-
             color: black;
             margin: 25px 0px 0px 100px;
             margin-bottom: 0px;
@@ -312,8 +310,8 @@
         padding: 20px;
         max-width: 100%;
         box-sizing: border-box;
-        margin: -10px 0px -10px 0px;
         left: 0;
+        box-shadow: 12px 3px 9px #00000038;
     }
 
     .content {
@@ -401,9 +399,10 @@
     gap: 10px;
     justify-content: center; /* Centraliza as imagens horizontalmente */
     background-color: #3498db;
-    margin-top: 50px;
-    padding-top: 50px;
-    padding-bottom: 30px;
+    margin-top: 55px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    box-shadow: -4px -1px 8px #00000073;
   }
 
   .image-container h3 {
@@ -428,7 +427,6 @@
 
   .image-container img:hover {
     transform: scale(1.2); /* Aplica o efeito de zoom */
-    transform: ;
     border-radius: 0%;
   }
 
@@ -438,6 +436,9 @@
     margin-top: 10px;
   }
 
+  .image-description h3{
+    text-align: center;
+  }
   @media (max-width: 768px) {
     .image-container {
       flex-direction: column;
@@ -452,6 +453,9 @@
     .image-description{
       width: 250px;
     }
+  }
+  footer{
+    background-color:#12486b;
   }
     </style>
 </head>
@@ -532,7 +536,7 @@
 
 <div class="image-container">
     <div>
-      <img src="canecas.jpg" alt="Imagem 1">
+      <img src="canecas.jpg" alt="Imagem 1" onclick="expandir()">
       <div class="image-description">
         <h3>Caneas personalizadas</h3>
         <p>Breve descrição sobre a caneca.</p>
@@ -546,7 +550,7 @@
       </div>
     </div>
     <div>
-      <img src="3x4.png" alt="Imagem 3">
+      <img src="3x4.1.jpg" alt="Imagem 3">
       <div class="image-description">
         <h3>Fotos 3x4</h3>
         <p>Breve descrição sobre a foto</p>
@@ -555,12 +559,15 @@
     <div>
       <img src="blusa 4.jpg" alt="Imagem 4">
       <div class="image-description">
-        <h3>Blusa Felipe Neto</h3>
-        <p>Breve descrição sobre a blusa 4. Creditos: Felipe Neto</p>
+        <h3>Blusa </h3>
+        <p>Breve descrição sobre a blusa 4. </p>
       </div>
     </div>
   </div>
 
+  <footer>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio eius nesciunt facilis voluptates maxime recusandae 
+  </footer>
     <script>
     // TAGBAR E CABEÇÁRIO
         (function() {
@@ -602,6 +609,12 @@
         images[currentIndex].classList.remove('hide'); // Exibir a primeira imagem
         titles[currentIndex].classList.remove('hide'); // Exibir o título da primeira imagem
         dots[currentIndex].classList.add('active'); // Marcar o primeiro ponto como ativo
+
+        //TRANSFORMAÇÃO DE IMAGEM NO CLICK
+        const img = image-container.querySelectorAll('img');
+        function expandir(){
+
+        }
     </script>
 </body>
 </html>
